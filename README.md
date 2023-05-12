@@ -2,6 +2,7 @@
 
 ![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white)
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) 
+![Vercel](https://img.shields.io/badge/Vercel-black?style=for-the-badge&logo=vercel&logoColor=white)
 
 This is a simple PWA designed to display historycal data of TON Cryptocurreny. Here you can review following data:
 
@@ -48,4 +49,13 @@ yarn start
 ```
 
 > **Note:**  Don't forget to change the API_URL in the **.env** file before deploying the application. This is necessary for the internal API routes to work correctly.
+
+### Link to live demo - https://ton-dashboard-pwa.vercel.app/
+### Screenshots
+![image](https://github.com/lambda2331/ton-dashboard-pwa/assets/23213125/a4fb570d-a8b8-453b-b6da-cbc3bc6e167b)
+
+Created By **Artsem Dudzinsi** 
+
+<a href="https://www.linkedin.com/in/a-dudzinski/">![image](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)<a/>
+<a href="https://t.me/Dudick97">![image](https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)<a/>  
 
