@@ -165,13 +165,16 @@ export class ChartService {
             const xPosition = index * step + this.startXPosition + this.xPadding * 2 + labelWidth / 2
             let coef = 1 - value / maxValue
 
-            if (coef < 0.1) {
+            if (coef < 0.1 && coef != 0) {
                 coef += 0.1
+            }
+
+            if (coef > 0.8) {
+                coef -= 0.15
             }
 
             const yCoordinate =  coef * (this.height + this.startYPosition + this.yPadding * 6)
             const yPosition = yCoordinate == 0 ? this.startYPosition : +yCoordinate.toFixed(1)
-            
             index ? this._ctx.lineTo(xPosition, yPosition) : this._ctx.moveTo(xPosition, yPosition)
         }
 
