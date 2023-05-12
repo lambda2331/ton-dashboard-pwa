@@ -1,0 +1,57 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 4rem;
+  min-height: 100vh;
+  animation: appearing 1s ease-in;
+}
+
+.header {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  margin-bottom: 5rem;
+}
+
+.chart {
+  height: 500px;
+  width: 100%;
+}
+
+.actionsContainer {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+@media only screen and (max-width: 1024px) {
+  .main {
+    padding: 2rem 1rem 0;
+  }
+
+  .header {
+    gap: .5rem;
+    margin-bottom: 1rem;
+  }
+
+  .chart {
+    height: 500px;
+  }
+
+  .actionsContainer {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+}
+
+@keyframes appearing {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

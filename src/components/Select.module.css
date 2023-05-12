@@ -1,0 +1,10 @@
+.select {
+    border-radius: 4px;
+    border: none;
+    background-color: #327AC1;
+    color: white;
+}
+
+.select:focus-visible {
+    outline: none;
+}
