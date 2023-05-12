@@ -163,8 +163,16 @@ export class ChartService {
             const labelWidth = this._ctx.measureText(label).width
 
             const xPosition = index * step + this.startXPosition + this.xPadding * 2 + labelWidth / 2
-            const yPosition =  (1 - value / maxValue) * (this.height + this.startYPosition + this.yPadding * 6)
-            index ? this._ctx.lineTo(xPosition, yPosition || this.startYPosition) : this._ctx.moveTo(xPosition, yPosition || this.startYPosition)
+            let coef = 1 - value / maxValue
+
+            if (coef < 0.1) {
+                coef += 0.1
+            }
+
+            const yCoordinate =  coef * (this.height + this.startYPosition + this.yPadding * 6)
+            const yPosition = yCoordinate == 0 ? this.startYPosition : +yCoordinate.toFixed(1)
+            
+            index ? this._ctx.lineTo(xPosition, yPosition) : this._ctx.moveTo(xPosition, yPosition)
         }
 
         this._ctx.stroke()
